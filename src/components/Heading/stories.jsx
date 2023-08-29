@@ -5,20 +5,27 @@ export default {
   component: Heading,
   args: {
     children: 'Não sei',
-    light: false,
+    colorDark: true,
   },
   argTypes: {
     children: { type: 'string' },
-    light: { type: 'boolean' },
+    colorDark: { type: 'boolean' },
+    size: { type: 'string' },
+    as: { type: 'string' },
+    upperCase: { type: 'boolean' },
   },
   parameters: {
     backgrounds: { default: 'dark' },
   },
 };
 
-export const Light = (args) => <Heading {...args} light={true} />;
-export const Dark = (args) => <Heading {...args} light={false} />;
+export const Light = (args) => <Heading {...args} />;
+export const Dark = (args) => <Heading {...args} />;
 
 Light.parameters = {
   backgrounds: { default: 'light' },
+};
+
+Dark.args = {
+  colorDark: false,
 };
