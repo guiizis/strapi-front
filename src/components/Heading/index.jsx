@@ -22,8 +22,8 @@ export const Heading = ({
 
 Heading.propTypes = {
   children: P.node.isRequired,
-  colorDark: P.bool.isRequired,
-  as: P.string.isRequired,
+  colorDark: P.bool,
+  as: P.string,
   size: P.oneOf(['big', 'medium', 'small', 'huge']),
-  upperCase: P.bool.isRequired,
+  upperCase: P.bool,
 };

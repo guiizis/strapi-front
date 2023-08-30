@@ -10,7 +10,6 @@ export default {
   argTypes: {
     children: { type: 'string' },
     colorDark: { type: 'boolean' },
-    size: { type: 'string' },
     as: { type: 'string' },
     upperCase: { type: 'boolean' },
   },
