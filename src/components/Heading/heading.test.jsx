@@ -63,4 +63,9 @@ describe('heading', () => {
       screen.getByRole('heading', { level: 2, name: 'Texto' }),
     ).toBeInTheDocument();
   });
+
+  it('should match snapshot', () => {
+    const { container } = renderTheme(<Heading> Texto </Heading>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
